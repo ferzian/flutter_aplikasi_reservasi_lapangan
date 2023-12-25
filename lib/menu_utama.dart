@@ -36,7 +36,7 @@ class _MenuUtamaState extends State<MenuUtama> {
                   ),
                 ),
                 Text(
-                  'GOR 123',
+                  'SPORT CENTER',
                   style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
