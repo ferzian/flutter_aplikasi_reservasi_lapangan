@@ -67,7 +67,7 @@ class _MenuUtamaState extends State<MenuUtama> {
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => daftarPemesanan()));
+                        builder: (context) => DaftarPemesanan()));
                   },
                   style: ElevatedButton.styleFrom(
                       textStyle: TextStyle(fontSize: 50),
