@@ -44,7 +44,7 @@ class _daftarLapanganState extends State<daftarLapangan> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => IsiData(),
+                            builder: (context) => IsiData(namaLapangan: namaLapangan,),
                           ),
                         );
                       },
@@ -93,7 +93,7 @@ class _daftarLapanganState extends State<daftarLapangan> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => IsiData(),
+                            builder: (context) => IsiData(namaLapangan: 'Lapangan Futsal',),
                           ),
                         );
                       },
