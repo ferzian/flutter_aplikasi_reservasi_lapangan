@@ -14,17 +14,62 @@ class _DaftarPemesananState extends State<DaftarPemesanan> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        title: Text('GOR 123', style: TextStyle(fontWeight: FontWeight.w500)),
+        title: Text('SPORT CENTER', style: TextStyle(fontWeight: FontWeight.w500)),
       ),
-      body: ListView.builder(
-        itemCount: pemesananList.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(pemesananList[index]['lapangan']),
-            subtitle: Text(
-                'Nama: ${pemesananList[index]['name']}\nNo. Telp: ${pemesananList[index]['noTelp']}\nDurasi: ${pemesananList[index]['durasi']} jam'),
-          );
-        },
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          pemesananList.isEmpty
+              ? Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text(
+                      'Tidak Ada Pesanan. \n\n Pesan Dulu Yuk!',
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.amber,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                )
+              : Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(
+                    'Daftar Pemesanan',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+          Expanded(
+            child: pemesananList.isEmpty
+                ? SizedBox() 
+                : ListView.builder(
+                    itemCount: pemesananList.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text(
+                          pemesananList[index]['lapangan'],
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight:
+                                  FontWeight.bold), 
+                        ),
+                        subtitle: Text(
+                          'Nama: ${pemesananList[index]['name']}\nNo. Telp: ${pemesananList[index]['noTelp']}\nDurasi: ${pemesananList[index]['durasi']} jam',
+                          style: TextStyle(
+                              fontSize: 20), 
+                        ),
+                      );
+                    },
+                  ),
+          ),
+        ],
       ),
     );
   }
