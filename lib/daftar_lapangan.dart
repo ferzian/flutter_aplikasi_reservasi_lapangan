@@ -14,7 +14,7 @@ class _daftarLapanganState extends State<daftarLapangan> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        title: Text('GOR 123', style: TextStyle(fontWeight: FontWeight.w500)),
+        title: Text('SPORT CENTER', style: TextStyle(fontWeight: FontWeight.w500)),
       ),
       body: Container(
         child: Column(
@@ -32,6 +32,7 @@ class _daftarLapanganState extends State<daftarLapangan> {
                 ),
               ),
             ),
+            
             Expanded(
               child: ListView.builder(
                 itemCount: 4,
