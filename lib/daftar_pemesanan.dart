@@ -1,21 +1,30 @@
+import 'package:aplikasi_reservasi_lapangan_olahraga/isi_data.dart';
 import 'package:flutter/material.dart';
 
-class daftarPemesanan extends StatefulWidget {
-  const daftarPemesanan({super.key});
+class DaftarPemesanan extends StatefulWidget {
+  const DaftarPemesanan({super.key});
 
   @override
-  State<daftarPemesanan> createState() => _daftarPemesananState();
+  State<DaftarPemesanan> createState() => _DaftarPemesananState();
 }
 
-class _daftarPemesananState extends State<daftarPemesanan> {
+class _DaftarPemesananState extends State<DaftarPemesanan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GOR 123'),
+        backgroundColor: Colors.amber,
+        title: Text('GOR 123', style: TextStyle(fontWeight: FontWeight.w500)),
       ),
-    body: Center(
-      child: Text('Daftar Pemesanan') 
+      body: ListView.builder(
+        itemCount: pemesananList.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(pemesananList[index]['lapangan']),
+            subtitle: Text(
+                'Nama: ${pemesananList[index]['name']}\nNo. Telp: ${pemesananList[index]['noTelp']}\nDurasi: ${pemesananList[index]['durasi']} jam'),
+          );
+        },
       ),
     );
   }
