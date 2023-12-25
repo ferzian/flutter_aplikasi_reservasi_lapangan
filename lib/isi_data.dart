@@ -28,7 +28,7 @@ class _IsiDataState extends State<IsiData> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        title: Text('GOR 123', style: TextStyle(fontWeight: FontWeight.w500)),
+        title: Text('SPORT CENTER', style: TextStyle(fontWeight: FontWeight.w500)),
       ),
       body: Container(
         padding: EdgeInsets.all(16),
@@ -38,7 +38,7 @@ class _IsiDataState extends State<IsiData> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                'Pemesanan untuk ${widget.namaLapangan}',
+                '${widget.namaLapangan}',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                  fontSize: 24.0,
@@ -86,7 +86,9 @@ class _IsiDataState extends State<IsiData> {
                     MaterialPageRoute(builder: (context) => DaftarPemesanan()),
                  );
                 },
-                child: Text('Pesan'),
+                child: Text('Pesan',
+                style: TextStyle(fontSize: 25),),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
               ),
             ],
           ),
