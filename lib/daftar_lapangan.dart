@@ -13,7 +13,8 @@ class _daftarLapanganState extends State<daftarLapangan> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GOR 123'),
+        backgroundColor: Colors.amber,
+        title: Text('GOR 123', style: TextStyle(fontWeight: FontWeight.w500)),
       ),
       body: Container(
         child: Column(
@@ -36,19 +37,20 @@ class _daftarLapanganState extends State<daftarLapangan> {
                 itemCount: 4,
                 itemBuilder: (BuildContext context, int index) {
                   if (index < 3) {
-                    String courtName =
+                    String namaLapangan =
                         'Lapangan Bulu Tangkis ${String.fromCharCode(65 + index)}';
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => isiData(),
+                            builder: (context) => IsiData(),
                           ),
                         );
                       },
                       child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 20.0, horizontal: 20.0),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -65,7 +67,7 @@ class _daftarLapanganState extends State<daftarLapangan> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    courtName,
+                                    namaLapangan,
                                     style: TextStyle(
                                       fontSize: 22.0,
                                       fontWeight: FontWeight.bold,
@@ -74,8 +76,9 @@ class _daftarLapanganState extends State<daftarLapangan> {
                                   ),
                                   SizedBox(height: 10.0),
                                   Text(
-                                    'Jl. Ahmad Yani No. ${index * 3 + 1}',
-                                    style: TextStyle(fontSize: 16.0, color: Colors.black),
+                                    'Jl. Ahmad Yani No. 1',
+                                    style: TextStyle(
+                                        fontSize: 16.0, color: Colors.black),
                                   ),
                                 ],
                               ),
@@ -90,12 +93,13 @@ class _daftarLapanganState extends State<daftarLapangan> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => isiData(),
+                            builder: (context) => IsiData(),
                           ),
                         );
                       },
                       child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 20.0, horizontal: 20.0),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -121,8 +125,9 @@ class _daftarLapanganState extends State<daftarLapangan> {
                                   ),
                                   SizedBox(height: 10.0),
                                   Text(
-                                    'Jl. Gatot Subroto No. 123',
-                                    style: TextStyle(fontSize: 16.0, color: Colors.black),
+                                    'Jl. Ahmad Yani No. 2',
+                                    style: TextStyle(
+                                        fontSize: 16.0, color: Colors.black),
                                   ),
                                 ],
                               ),
